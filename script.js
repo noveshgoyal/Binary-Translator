@@ -33,3 +33,16 @@ function textToBinary() {
             .catch(errorHandler);
     })
 }
+
+function binaryToText() {
+    displayElements();
+    input.placeholder = "Enter your binary number";
+    btnTranslate.addEventListener('click', () => {
+        let translatedText = input.value
+        .split(' ')
+        .map(b => parseInt(b, 2))
+        .map(num => String.fromCharCode(num)).join('');
+        console.log(translatedText);
+        output.innerText = translatedText;
+    })
+}
