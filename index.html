@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Binary Translator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <div class="container">
         <h1>Binary Translator</h1>
-        <input type="text" name="" id="input-txt" placeholder="Enter your text">
-        <button>Translate</button>
-        <div id="output-label">Binary Text: </div>
+        <div class="buttons">
+            <button id="to-binary-btn" onclick="textToBinaryClickHandler()">
+                Text to Binary
+            </button>
+            <button id="to-string-btn" onclick="binaryToTextClickHandler()">
+                Binary to Text
+            </button>
+        </div>
+        <label for="input">Enter here:</label>
+        <input id="input"/>
+        <button id="translate-btn">Translate</button>
+        <div id="output-label">Your output:</div>
         <div id="output"></div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
